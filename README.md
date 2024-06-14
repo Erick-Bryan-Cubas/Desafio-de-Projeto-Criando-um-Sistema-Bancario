@@ -1,32 +1,24 @@
-# Sistema Bancário DIO-BANK
+# Desafio de Código: Sistema Bancário Orientado a Objetos
 
-O Sistema Bancário DIO-BANK é uma simulação de operações bancárias básicas, incluindo cadastro de usuários, criação de contas correntes e execução de operações bancárias como depósitos, saques e consulta de extratos.
+## Objetivo
+O objetivo geral deste desafio é atualizar a implementação do sistema bancário para armazenar os dados de clientes e contas bancárias em objetos ao invés de dicionários. O código deve seguir o modelo de classes UML fornecido.
 
-## Funcionalidades
+## Contextualização
+Vamos atualizar a implementação do sistema bancário para armazenar os dados de clientes e contas bancárias em objetos. O foco é em Programação Orientada a Objetos (POO) e a modelagem de classes. Não é necessário entender todos os detalhes do diagrama UML fornecido, pois o foco é na implementação em Python.
 
-- **Cadastro de Usuários:** Permite o cadastro de novos usuários com informações básicas como nome, data de nascimento, CPF e endereço.
-- **Criação de Contas Correntes:** Após o cadastro, é possível criar uma conta corrente associada ao usuário.
-- **Operações Bancárias:** Os usuários podem realizar depósitos e saques em suas contas correntes, além de consultar o extrato bancário que mostra todas as movimentações. Contudo o saque só é permitido se o saldo for suficiente. Além de ser limitado a R$ 500,00 em apenas 3 operações por dia.
+## Diagrama UML
+![Diagrama UML](images/Trilha%20Python%20-%20desafio.png)
 
-## Como Usar
+## Desafio Parte 1
+1. **Modelagem das Classes**: Crie classes para representar `Conta`, `ContaCorrente`, `Cliente`, `PessoaFisica`, `Historico`, `Transacao`, `Deposito` e `Saque` conforme o diagrama UML.
+2. **Implementação Inicial**: Construa a estrutura das classes e seus atributos e métodos, conforme descrito no diagrama.
+3. **Operações Básicas**: As operações de `saldo`, `nova_conta`, `sacar` e `depositar` devem ser implementadas na classe `Conta`.
+4. **Histórico de Transações**: A classe `Historico` deve permitir adicionar transações, e a classe `Transacao` deve ser uma interface para `Deposito` e `Saque`.
 
-Para utilizar o sistema, siga os passos abaixo:
+A resolução da parte 1 pode ser encontrada em `src/resolucao_desafio_parte_1.py`.
 
-1. Inicie o script para que o sistema seja carregado.
-2. Será apresentada a mensagem de boas-vindas do DIO-BANK. Siga as instruções na tela para acessar uma conta existente ou criar uma nova conta.
-3. Se optar por criar uma nova conta, informe os dados solicitados (nome, data de nascimento, CPF e endereço).
-4. Para acessar uma conta existente, informe o CPF associado à conta.
-5. Uma vez na conta, escolha entre as operações disponíveis: depositar, sacar, visualizar extrato ou sair.
+## Desafio Parte 2
+1. **Atualização dos Métodos**: Após concluir a modelagem das classes, atualize os métodos que tratam as opções do menu para funcionarem com as classes modeladas.
+2. **Integração com o Menu**: Faça com que o sistema volte a funcionar redondinho com o uso do menu e as operações todas funcionando.
 
-## Tecnologias Utilizadas
-
-- Python: Linguagem de programação utilizada para desenvolver todas as funcionalidades do sistema.
-
-## Limitações
-
-- O sistema não possui persistência de dados, ou seja, todas as informações são perdidas ao encerrar a execução do script.
-- A validação dos dados é básica, focando principalmente na formatação e na unicidade do CPF.
-
-## Licença
-
-Este projeto é distribuído sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+A resolução da parte 2 pode ser encontrada em `src/resolucao_desafio_parte_2.py`.
